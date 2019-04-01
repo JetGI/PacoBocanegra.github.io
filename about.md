@@ -12,4 +12,4 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-[santiago.amo.quintero@gmail.com](mailto:santiago.amo.quintero@gmail.com)
+[esepaquet@gmail.com](mailto:esepaquet@gmail.com)
