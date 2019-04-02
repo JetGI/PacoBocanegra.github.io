@@ -31,7 +31,7 @@ El inyector introduce los servicios en el cliente. A menudo, también construye 
     public void setService(Service service) {
        this.service = service;
     }
-    ~~~
+   ~~~
   - Inyección de interfaz: la interfaz de la dependencia proporciona un método de inyección que inyectará la dependencia en cualquier cliente que se le pase. Los clientes deben implementar una interfaz que exponga un método de establecimiento que acepte la dependencia.
     ~~~
     // Service setter interface.
