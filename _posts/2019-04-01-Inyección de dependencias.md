@@ -22,14 +22,27 @@ El inyector introduce los servicios en el cliente. A menudo, también construye 
 
   - Inyección de constructor: las dependencias se proporcionan a través del constructor de clase de un cliente.
     ~~~
-    Client(Service service) {
-        this.service = service;
+    public class TextEditor {
+       private SpellChecker spellChecker;
+
+       public TextEditor(SpellChecker spellChecker) {
+
+          this.spellChecker = spellChecker;
+       }
+
+       public void spellCheck() {
+          spellChecker.checkSpelling();
+       }
     }
     ~~~
   - Inyección de setter: el cliente expone un método set que utiliza el inyector para inyectar la dependencia.
      ~~~
-      public void setService(Service service) {
-         this.service = service;
+      public class TextEditor {
+         private SpellChecker spellChecker;
+
+         public void setSpellChecker(SpellChecker spellChecker) {
+            this.spellChecker = spellChecker;
+         }
       }
      ~~~
   - Inyección de interfaz: la interfaz de la dependencia proporciona un método de inyección que inyectará la dependencia en cualquier cliente que se le pase. Los clientes deben implementar una interfaz que exponga un método de establecimiento que acepte la dependencia.
